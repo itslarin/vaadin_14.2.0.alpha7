@@ -7,9 +7,11 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
 import com.vaadin.flow.router.Route
 import com.wagerflow.frontnode.ui.layouts.LayoutWithMenuBar
+import com.vaadin.flow.component.dependency.CssImport
 
 
 @Route("dashboard/countrylabels",layout = LayoutWithMenuBar::class)
+@CssImport(value="./styles/overrideMinWidth.css",themeFor="vaadin-dialog-overlay")
 class CountryLabelDashboard(): VerticalLayout() {
 
 
@@ -27,7 +29,7 @@ class CountryLabelDashboard(): VerticalLayout() {
 
             println("!!!opened-changed event fired")
 
-            dialog.width = "900px"
+           // dialog.width = "900px"
 
             println("!!!dialog width = ${dialog.width}")
         }
